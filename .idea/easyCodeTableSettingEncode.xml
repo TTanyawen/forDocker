@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EasyCodeTableSetting">
+    <option name="tableInfoMap">
+      <map>
+        <entry key="books.comment" value="eyJuYW1lIjoiQ29tbWVudCIsInByZU5hbWUiOiIiLCJ0ZW1wbGF0ZUdyb3VwTmFtZSI6IkRlZmF1bHQiLCJmdWxsQ29sdW1uIjpbeyJuYW1lIjoiaWQiLCJjb21tZW50IjoixsDC22lkIiwidHlwZSI6ImphdmEubGFuZy5JbnRlZ2VyIiwiY3VzdG9tIjpmYWxzZSwiZXh0Ijoie30ifSx7Im5hbWUiOiJjb250ZW50IiwiY29tbWVudCI6IsbAwtvE2sjdIiwidHlwZSI6ImphdmEubGFuZy5TdHJpbmciLCJjdXN0b20iOmZhbHNlLCJleHQiOiJ7fSJ9LHsibmFtZSI6ImNBdXRob3IiLCJjb21tZW50IjoixsDC29XfIiwidHlwZSI6ImphdmEubGFuZy5TdHJpbmciLCJjdXN0b20iOmZhbHNlLCJleHQiOiJ7fSJ9LHsibmFtZSI6ImJvb2tJZCIsImNvbW1lbnQiOiK52MGqtcTNvMrpIiwidHlwZSI6ImphdmEubGFuZy5JbnRlZ2VyIiwiY3VzdG9tIjpmYWxzZSwiZXh0Ijoie30ifV0sInNhdmVQYWNrYWdlTmFtZSI6ImNvbS5leGFtcGxlLnRyeWRvY2tlciIsInNhdmVQYXRoIjoiLi9zcmMvbWFpbi9qYXZhL2NvbS9leGFtcGxlL3RyeWRvY2tlciIsInNhdmVNb2RlbE5hbWUiOiJ0cnlEb2NrZXIifQ==" />
+      </map>
+    </option>
+  </component>
+</project>

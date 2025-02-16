@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="books@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.43">
+    <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <ServerVersion>8.0.34</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="big_market"/>
+    <schema id="3" parent="1" name="bookdb"/>
+    <schema id="4" parent="1" name="books">
+      <Current>1</Current>
+    </schema>
+    <schema id="5" parent="1" name="clouddb"/>
+    <schema id="6" parent="1" name="clouddb2.0"/>
+    <schema id="7" parent="1" name="college_big"/>
+    <schema id="8" parent="1" name="college_small"/>
+    <schema id="9" parent="1" name="filmdb"/>
+    <schema id="10" parent="1" name="flower"/>
+    <schema id="11" parent="1" name="forstudy"/>
+    <schema id="12" parent="1" name="group_buy_market"/>
+    <schema id="13" parent="1" name="hm_redis"/>
+    <schema id="14" parent="1" name="information_schema"/>
+    <schema id="15" parent="1" name="keshan2"/>
+    <schema id="16" parent="1" name="litemall"/>
+    <schema id="17" parent="1" name="lol"/>
+    <schema id="18" parent="1" name="lol2"/>
+    <schema id="19" parent="1" name="mapperxml01"/>
+    <schema id="20" parent="1" name="movie"/>
+    <schema id="21" parent="1" name="moviedb"/>
+    <schema id="22" parent="1" name="mybatis"/>
+    <schema id="23" parent="1" name="mybatis_demo"/>
+    <schema id="24" parent="1" name="mydatabase"/>
+    <schema id="25" parent="1" name="myfavor"/>
+    <schema id="26" parent="1" name="myfavorite"/>
+    <schema id="27" parent="1" name="mymemo"/>
+    <schema id="28" parent="1" name="mysql"/>
+    <schema id="29" parent="1" name="performance_schema"/>
+    <schema id="30" parent="1" name="runoob"/>
+    <schema id="31" parent="1" name="school"/>
+    <schema id="32" parent="1" name="scoredb"/>
+    <schema id="33" parent="1" name="shiro_demo"/>
+    <schema id="34" parent="1" name="shirospringboottest"/>
+    <schema id="35" parent="1" name="sky_take_out"/>
+    <schema id="36" parent="1" name="spring_boot_movie"/>
+    <schema id="37" parent="1" name="spring_jdbc"/>
+    <schema id="38" parent="1" name="studb"/>
+    <schema id="39" parent="1" name="sys"/>
+    <schema id="40" parent="1" name="test"/>
+    <schema id="41" parent="1" name="try1"/>
+    <schema id="42" parent="1" name="user_address"/>
+    <table id="43" parent="4" name="comment">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb3_general_ci</CollationName>
+    </table>
+    <table id="44" parent="4" name="tb_book">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb3_general_ci</CollationName>
+    </table>
+    <table id="45" parent="4" name="tbbook">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb3_general_ci</CollationName>
+    </table>
+    <column id="46" parent="43" name="id">
+      <AutoIncrement>10</AutoIncrement>
+      <Comment>评论id</Comment>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="47" parent="43" name="content">
+      <Comment>评论内容</Comment>
+      <DataType>longtext|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="48" parent="43" name="c_author">
+      <Comment>评论者</Comment>
+      <DataType>varchar(30)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="49" parent="43" name="book_id">
+      <Comment>关联的图书</Comment>
+      <DataType>int|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <index id="50" parent="43" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="51" parent="43" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="52" parent="44" name="book_id">
+      <AutoIncrement>7</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="53" parent="44" name="title">
+      <DataType>char(100)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="54" parent="44" name="author">
+      <DataType>char(16)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="55" parent="44" name="press">
+      <DataType>char(20)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="56" parent="44" name="price">
+      <DataType>decimal(10,2 digit)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <index id="57" parent="44" name="PRIMARY">
+      <ColNames>book_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="58" parent="44" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="59" parent="45" name="id">
+      <AutoIncrement>6</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="60" parent="45" name="title">
+      <DataType>char(100)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="61" parent="45" name="author">
+      <DataType>char(16)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="62" parent="45" name="press">
+      <DataType>char(20)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="63" parent="45" name="price">
+      <DataType>decimal(10,2 digit)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <index id="64" parent="45" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="65" parent="45" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

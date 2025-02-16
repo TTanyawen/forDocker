@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.trydocker.dao.CommentDao">
+
+    <resultMap type="com.example.trydocker.entity.Comment" id="CommentMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="cAuthor" column="c_author" jdbcType="VARCHAR"/>
+        <result property="bookId" column="book_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="CommentMap">
+        select
+          id, content, c_author, book_id
+        from comment
+        where id = #{id}
+    </select>
+    <!--查询所有-->
+    <select id="queryAll" resultMap="CommentMap">
+        select
+            id, content, c_author, book_id
+        from comment
+    </select>
+
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from comment
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="content != null and content != ''">
+                and content = #{content}
+            </if>
+            <if test="cAuthor != null and cAuthor != ''">
+                and c_author = #{cAuthor}
+            </if>
+            <if test="bookId != null">
+                and book_id = #{bookId}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into comment(content, c_author, book_id)
+        values (#{content}, #{cAuthor}, #{bookId})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into comment(content, c_author, book_id)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.content}, #{entity.cAuthor}, #{entity.bookId})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into comment(content, c_author, book_id)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.content}, #{entity.cAuthor}, #{entity.bookId})
+        </foreach>
+        on duplicate key update
+        content = values(content),
+        c_author = values(c_author),
+        book_id = values(book_id)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update comment
+        <set>
+            <if test="content != null and content != ''">
+                content = #{content},
+            </if>
+            <if test="cAuthor != null and cAuthor != ''">
+                c_author = #{cAuthor},
+            </if>
+            <if test="bookId != null">
+                book_id = #{bookId},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from comment where id = #{id}
+    </delete>
+
+</mapper>
+
